@@ -26,6 +26,7 @@ public class CheckUtilsTest {
 	public void isEmptyTest() {
 		Assert.assertEquals(CheckUtils.isEmpty(null), true);
 		Assert.assertEquals(CheckUtils.isEmpty(new String[10]), true);
+		Assert.assertEquals(CheckUtils.isEmpty(new String[0]), true);
 		Assert.assertEquals(CheckUtils.isEmpty(new Object[]{""}), true);
 		Assert.assertEquals(CheckUtils.isEmpty(new Object[]{1, "", 123}), false);
 		Assert.assertEquals(CheckUtils.isEmpty(new Object[]{1, " ", 123}), false);
