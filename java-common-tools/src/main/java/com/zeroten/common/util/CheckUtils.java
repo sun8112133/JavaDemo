@@ -21,7 +21,7 @@ public class CheckUtils {
 			return false;
 		}
 		for (String str : strings) {
-			if (str == null || "".equals(str.trim())) {
+			if (str == null || str.length() == 0) {
 				return false;
 			}
 		}
@@ -35,7 +35,7 @@ public class CheckUtils {
 	 * @return
 	 */
 	public static boolean isEmpty(Object[] arr) {
-		return (arr != null && arr.length > 0) ? false : true;
+		return arr == null || arr.length == 0;
 	}
 	
 	/**
@@ -46,7 +46,7 @@ public class CheckUtils {
 	 * @return
 	 */
 	public static boolean equals(String str1, String str2) {
-		return (str1 != null && str1.equals(str2)) ? true : false;
+		return str1 != null && str1.equals(str2);
 	}
 	
 	/**
@@ -57,7 +57,7 @@ public class CheckUtils {
 	 * @return
 	 */
 	public static boolean equals(Integer n1, Integer n2) {
-		return (n1 != null && n1.equals(n2)) ? true : false;
+		return n1 != null && n1.equals(n2);
 	}
 	
 }
